@@ -2,68 +2,175 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mango's Palace</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Lavender Sea</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+    /* Background gradient lavender (bottom left) → periwinkle (top right) */
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #ff77e9, #ffc3a0);
-      color: #333;
+      height: 100vh;
+      background: linear-gradient(to top right, #B497BD 0%, #9CAAF1 100%);
+      font-family: 'Poppins', sans-serif;
+      color: #2c2c54;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      height: 100vh;
+      align-items: center;
       text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Milky Way galaxy background with stars and sparkles */
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background:
+        radial-gradient(2px 2px at 20% 15%, white, transparent),
+        radial-gradient(1.5px 1.5px at 70% 40%, #ddd9ff, transparent),
+        radial-gradient(3px 3px at 50% 80%, #c8a2c8, transparent),
+        radial-gradient(1px 1px at 80% 90%, #aabaff, transparent),
+        radial-gradient(2.5px 2.5px at 10% 85%, #d8ccff, transparent),
+        radial-gradient(1.2px 1.2px at 40% 30%, #f0e6ff, transparent);
+      background-repeat: no-repeat;
+      z-index: 0;
+      opacity: 0.8;
+      pointer-events: none;
+      filter: drop-shadow(0 0 2px white);
+      animation: twinkle 6s infinite alternate ease-in-out;
+    }
+
+    @keyframes twinkle {
+      0% {opacity: 0.7;}
+      100% {opacity: 1;}
+    }
+
+    /* Content container above background */
+    .content {
+      position: relative;
+      z-index: 1;
+      max-width: 600px;
+      padding: 0 20px;
     }
 
     h1 {
+      font-weight: 600;
       font-size: 4rem;
-      color: #fff;
-      text-shadow: 2px 2px #000;
+      margin-bottom: 0.2rem;
+      letter-spacing: 3px;
+      color: #4b3b67;
+      text-shadow: 0 0 6px #b897d6;
     }
 
     p {
-      font-size: 1.2rem;
-      color: #fff;
-      max-width: 600px;
-      margin-top: 1rem;
+      font-weight: 300;
+      font-size: 1.3rem;
+      margin-top: 0;
+      color: #5a4e8c;
+      font-style: italic;
+      letter-spacing: 1.2px;
     }
 
-    a {
-      margin-top: 2rem;
-      display: inline-block;
-      background: #fff;
-      color: #ff1493;
-      text-decoration: none;
-      padding: 10px 20px;
+    button {
+      margin-top: 2.5rem;
+      background-color: #6a5acd;
+      border: none;
       border-radius: 30px;
-      font-weight: bold;
-      transition: all 0.3s ease;
+      padding: 12px 28px;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 0 10px #7b68ee;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      letter-spacing: 1.5px;
+      user-select: none;
     }
 
-    a:hover {
-      background: #ff1493;
-      color: #fff;
-      box-shadow: 0 0 10px #ff1493;
+    button:hover {
+      background-color: #7b68ee;
+      box-shadow: 0 0 18px #a39fff;
     }
 
     footer {
       position: absolute;
       bottom: 10px;
       font-size: 0.8rem;
-      color: #fff;
+      color: #4b3b67;
+      font-weight: 500;
+      width: 100%;
+      text-align: center;
+      letter-spacing: 0.8px;
+      z-index: 1;
+      user-select: none;
+    }
+
+    /* Spontaneous emoji collage scattered randomly */
+    .emoji-collage {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      user-select: none;
+      font-size: 20px;
+      opacity: 0.7;
+    }
+
+    .emoji-collage span {
+      position: absolute;
+      animation: floatStars 8s ease-in-out infinite;
+      filter: drop-shadow(0 0 1px #fff);
+    }
+
+    /* Different float speeds and delays */
+    .emoji-collage span:nth-child(odd) {
+      animation-duration: 7s;
+    }
+    .emoji-collage span:nth-child(even) {
+      animation-duration: 9s;
+      animation-delay: 2s;
+    }
+
+    @keyframes floatStars {
+      0%, 100% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+        opacity: 0.7;
+      }
+      50% {
+        transform: translateY(-10px) translateX(5px) rotate(15deg);
+        opacity: 1;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="emoji-collage" aria-hidden="true">
+    <span style="top: 10%; left: 15%;">🌌</span>
+    <span style="top: 25%; left: 80%;">✨</span>
+    <span style="top: 40%; left: 30%;">🌙</span>
+    <span style="top: 60%; left: 50%;">🌟</span>
+    <span style="top: 75%; left: 20%;">💫</span>
+    <span style="top: 85%; left: 65%;">🔮</span>
+    <span style="top: 30%; left: 70%;">🪐</span>
+    <span style="top: 50%; left: 85%;">🌠</span>
+    <span style="top: 20%; left: 40%;">☄️</span>
+    <span style="top: 65%; left: 15%;">🌺</span>
+  </div>
 
-  <h1>Welcome to Mango's Palace 🍑</h1>
-  <p>This is my digital throne. Stay cute, stay chaotic, and bow before the baddest slut on the web.</p>
-  
-  <a href="#">Follow the magic ✨</a>
+  <div class="content">
+    <h1>The Lavender Sea</h1>
+    <p>The amalgamation of lionheart and dragonspirit</p>
+    <button onclick="window.open('https://bsky.app/profile/yuki-kino.bsky.social', '_blank')">Embrace Divine Wisdom</button>
+  </div>
 
-  <footer>© 2025 Mango. All sass reserved.</footer>
+  <footer>
+    &copy; yuki-kinomoto | lavender-dragon | double the trouble, all sass reserved est. 2000
+  </footer>
 </body>
 </html>
