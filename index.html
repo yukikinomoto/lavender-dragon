@@ -1,138 +1,120 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>The Lavender Sea</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&family=Josefin+Sans:wght@300;500&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Josefin Sans', sans-serif;
-      background: linear-gradient(135deg, #6b5b95, #b3a0c9);
-      color: #fff;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      overflow-x: hidden;
-      background-image: url('https://i.imgur.com/UhVwG5f.jpg');
-      background-size: cover;
-      background-position: center;
-      text-align: center;
-      padding: 2rem;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lavender Sea</title>
+    <link rel="icon" href="assets/moon%20symbol.png" type="image/png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 
-    h1 {
-      font-family: 'Zen Tokyo Zoo', cursive;
-      font-size: 3.5rem;
-      margin-bottom: 0.5rem;
-      white-space: nowrap;
-    }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'DM Serif Display', serif;
+            background: linear-gradient(to bottom right, #1a0033, #33004d, #1a0026);
+            color: #e0d4f7;
+            text-align: center;
+            cursor: url('assets/star%20symbol.jpg'), auto;
+        }
 
-    p {
-      font-size: 1.2rem;
-      font-weight: 300;
-      margin-bottom: 2rem;
-    }
+        h1 {
+            margin-top: 50px;
+            font-size: 3.5em;
+            letter-spacing: 2px;
+        }
 
-    .symbol-bar {
-      font-size: 1.5rem;
-      margin: 1rem 0;
-      color: #d8b4f8;
-    }
+        p {
+            font-size: 1.2em;
+            margin: 20px auto;
+            max-width: 600px;
+        }
 
-    .links {
-      display: flex;
-      gap: 1.2rem;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-bottom: 2rem;
-    }
+        .button {
+            background-color: #4b0082;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin-top: 30px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-    .link-button {
-      padding: 0.6rem 1.2rem;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid #fff;
-      border-radius: 10px;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
+        .button:hover {
+            background-color: #7b1fa2;
+            transform: scale(1.05);
+        }
 
-    .link-button:hover {
-      background: rgba(255, 255, 255, 0.3);
-      transform: scale(1.05);
-    }
+        .divider {
+            width: 60%;
+            height: 2px;
+            background-color: #d1b3ff;
+            margin: 30px auto;
+        }
 
-    .social-icons {
-      display: flex;
-      gap: 1.2rem;
-      justify-content: center;
-      margin-top: 1rem;
-    }
+        .social-icons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
 
-    .social-icons a img {
-      width: 32px;
-      height: 32px;
-      filter: drop-shadow(0 0 4px #fff);
-      transition: transform 0.3s ease;
-    }
+        .social-icons a img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s ease;
+        }
 
-    .social-icons a img:hover {
-      transform: scale(1.2);
-    }
+        .social-icons a img:hover {
+            transform: scale(1.2);
+        }
 
-    footer {
-      font-size: 0.85rem;
-      opacity: 0.7;
-      margin-top: auto;
-      margin-bottom: 1rem;
-    }
+        audio {
+            margin-top: 40px;
+        }
 
-    audio {
-      display: none;
-    }
-  </style>
+        .footer {
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #bfa8e3;
+        }
+    </style>
 </head>
 <body>
-  <h1>The Lavender Sea</h1>
-  <p>The amalgamation of lionheart and dragonspirit</p>
+    <h1>The Lavender Sea</h1>
+    <p>Welcome to the cosmic realm of Lavender Dragon. Explore art, presence, and divinity wrapped in celestial hues.</p>
 
-  <div class="symbol-bar">
-    ✧ ⋆｡˚ ☾ ˚｡⋆ ✩ ⋆｡ﾟ☁︎｡⋆｡ ★ ⋆
-  </div>
-
-  <div class="links">
-    <a class="link-button" href="https://bsky.app/profile/yuki-kino.bsky.social" target="_blank">
-      Embrace Divine Wisdom ✦
+    <a href="https://www.canva.com/design/DAGGBl2AhWw/jP6IZGmfBrhWf04CDycuUQ/view?utm_content=DAGGBl2AhWw&utm_campaign=designshare&utm_medium=link&utm_source=editor" class="button">
+        <img src="assets/star%20symbol.jpg" alt="star" width="20"> Embrace Divine Wisdom <img src="assets/triple%20star%20symbol.jpg" alt="triple star" width="20">
     </a>
-    <a href="https://playlink.epal.gg/@1531078120?oid=2798057&icd=yRZ6mAxWe&se=epal&pj=s" target="_blank">
-      <img src="https://i.imgur.com/yk7v96C.png" alt="E-Pal" width="32" height="32" title="E-Pal Profile">
-    </a>
-    <a href="https://www.twitch.tv/thelavenderdragon" target="_blank">
-      <img src="https://i.imgur.com/YkF4gG4.png" alt="Twitch" title="Twitch Channel">
-    </a>
-    <a href="https://steamcommunity.com/id/lvndragon/" target="_blank">
-      <img src="https://i.imgur.com/zZ6Z2Xd.png" alt="Steam" title="Steam Profile">
-    </a>
-  </div>
 
-  <div class="symbol-bar">
-    ☽ ⋆｡˚ ❁ ✦ ⋆｡˚☁︎｡⋆｡ ☼ 𓂃 ࣪˖ ִֶָ☾⋆⁺₊⋆ ☀︎
-  </div>
+    <div class="divider"></div>
 
-  <footer>
-    © yuki-kinomoto | lavender-dragon | double the trouble, all sass reserved | est. 2000
-  </footer>
+    <div class="social-icons">
+        <a href="https://playlink.epal.gg/@1531078120?oid=2798057&icd=yRZ6mAxWe&se=epal&pj=s" target="_blank">
+            <img src="assets/moon%20and%20star%20symbol.jpg" alt="Epal">
+        </a>
+        <a href="https://www.twitch.tv/thelavenderdragon" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Twitch_icon.svg" alt="Twitch">
+        </a>
+        <a href="https://steamcommunity.com/id/lvndragon/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg" alt="Steam">
+        </a>
+    </div>
 
-  <audio autoplay loop>
-    <source src="https://files.catbox.moe/xyjp8i.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
+    <audio controls autoplay loop>
+        <source src="assets/[MapleStory%20BGM]%20Title.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="footer">
+        &copy; 2025 The Lavender Dragon. All cosmic rights reserved.
+    </div>
 </body>
 </html>
-
